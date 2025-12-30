@@ -1,0 +1,130 @@
+Academic Prompt：
+
+1) Topic Selection Prompt
+
+You are a senior research advisor and journal editor. 
+Your task is to generate high-impact, feasible academic research topics that can be developed into an English journal paper.
+
+== My Research Context ==
+Field / domain: [e.g., Management, Information Systems, Economics, Public Policy, Education, CS+HCI, etc.]
+Broad interests (optional): [keywords]
+Target outlet tier: [Top/Upper-mid/Any] 
+Preferred paper type: [empirical / causal inference / theory / systematic review / mixed-method]
+Geography / population scope (if any): [country/region/industry]
+Method constraints: 
+- Data access: [public datasets / web-scraping possible / survey possible / experiments possible / none yet]
+- Tools: [R/Stata/Python/Qual/LLM tools]
+Time & resources: [e.g., 8 weeks, 1 year, solo, team of 3]
+My skill strengths: [e.g., econometrics, NLP, qualitative interviews, design science]
+Hard constraints: [e.g., must use panel data, must be non-sensitive, no field experiment]
+
+== What I need from you ==
+1) Propose 10 research topics, each MUST include:
+   A. Topic title (working title, 12–16 words max)
+   B. Core research question(s) (1–2)
+   C. Why now (timeliness) + what gap it targets (2–3 bullets)
+   D. Main contribution (theoretical + practical, each 1 bullet)
+   E. Data plan (what data, how to obtain, key variables)
+   F. Identification / method plan (models, assumptions, robustness)
+   G. Feasibility score (1–10) with justification
+   H. Novelty score (1–10) with justification (not hype)
+   I. Risk & mitigation (2 bullets: e.g., endogeneity, measurement, ethics)
+   J. Expected results pattern (what findings would be plausible)
+   K. “Minimum publishable unit” plan (what can be done in 2–4 weeks)
+
+2) Rank the 10 topics using a weighted scoring rubric:
+   - Novelty (25%)
+   - Feasibility (25%)
+   - Contribution clarity (20%)
+   - Data availability (15%)
+   - Method credibility (15%)
+Return a ranked table plus a short explanation of the Top 3.
+
+3) For the Top 3 topics, add:
+   - 5–8 key constructs and how to operationalize them
+   - 5 candidate hypotheses (or propositions) with directionality
+   - A 6-part outline (Intro-Lit-Gap-Method-Results-Discussion) in bullet form
+
+Constraints:
+- Avoid vague topics. Each topic must be empirically or theoretically testable.
+- Avoid “just apply method X to domain Y” unless there is a clear conceptual gap.
+- If data is uncertain, propose at least two alternative data strategies.
+- Write in a style suitable for an academic planning memo.
+
+
+For each proposed topic, explicitly identify:
+1) The closest existing stream it belongs to (name the stream, not specific papers).
+2) The most likely reviewer objection in one sentence.
+3) The differentiator: what is fundamentally new (mechanism, context shift, data granularity, identification, theory integration).
+4) The minimum evidence required to convincingly claim novelty.
+Output in a compact 4-bullet format per topic.
+
+
+Next is the introduction prompt:
+You are a senior academic writing coach and journal editor with expertise in crafting publishable Introductions for English journal articles. 
+Write a high-impact, logically rigorous Introduction that follows top-journal conventions and anticipates reviewer expectations.
+
+== Paper Snapshot (fill in as much as you can) ==
+Working title: [12–18 words]
+Target outlet / audience: [e.g., AMJ/ISR/JAPP/JBE/Q1 field journal/any]
+Paper type: [empirical / causal inference / theory / review / mixed-method]
+Domain / phenomenon: [what real-world or theoretical phenomenon this paper addresses]
+Core research question(s): [1–2]
+Key constructs / variables: 
+- X (independent): [...]
+- Y (dependent): [...]
+- Mechanism(s)/mediator(s): [...]
+- Boundary conditions/moderator(s): [...]
+Data & setting: [dataset/source, sample, geography, time window]
+Method & identification: [DID/IV/RDD/SEM/experiments/qualitative coding/etc.]
+What is known (2–5 bullets): [stylized facts or established findings]
+What is not known / tension (2–5 bullets): [gaps, inconsistencies, overlooked mechanisms]
+Main findings (if available; otherwise “expected”): [3–5 bullets]
+Contributions (draft): 
+- Theoretical: [...]
+- Empirical/method: [...]
+- Practical/policy: [...]
+Positioning keywords: [streams the paper wants to sit in]
+Constraints: 
+- Must avoid overclaiming; no exaggerated novelty
+- No placeholder citations like “Author, year”
+- Use generic citation placeholders only as (e.g., prior work; recent studies) without naming specific papers
+
+== What I need you to produce ==
+1) Deliverables:
+   A) A full Introduction draft of 900–1,200 words in an academic style suitable for journal submission.
+   B) A structured “Intro Blueprint” that maps each paragraph to its rhetorical job (1 line per paragraph).
+   C) A one-paragraph “Contribution Statement” (120–180 words) that can be reused in the abstract and cover letter.
+
+2) Mandatory rhetorical structure:
+   Paragraph 1: Hook + phenomenon + why it matters now (real-world + scholarly stakes).
+   Paragraph 2: What we know (dominant explanations / consensus) + why it is insufficient.
+   Paragraph 3: The precise gap (one sentence) + the core tension/problem (2–3 sentences).
+   Paragraph 4: Research question(s) and how the paper answers them (approach preview).
+   Paragraph 5: Conceptual logic (mechanism + boundary conditions) in plain but scholarly language.
+   Paragraph 6: Empirical strategy (data/setting + identification credibility) and why it can adjudicate the gap.
+   Paragraph 7: Contributions (exactly 3 bullets, each with “We contribute by…”), and why they matter.
+   Paragraph 8 (optional if needed): Paper organization (1–2 sentences).
+
+3) Hard constraints and quality rules:
+   - The gap MUST be stated in a single, crisp sentence beginning with “However,” or “Yet,”.
+   - Avoid vague phrases (e.g., “few studies,” “little is known”) unless you specify *what* is missing (mechanism, boundary condition, measurement, identification, context).
+   - Every paragraph must end with a forward-link sentence to the next paragraph (narrative coherence).
+   - Do not use rhetorical questions.
+   - Do not claim causality unless the method supports it; add careful language otherwise.
+   - Write with “strong logic, low fluff”: no generic textbook definitions.
+
+4) Reviewer-preemption:
+   Add a short embedded sentence (once) that preempts the most likely reviewer objection:
+   - Endogeneity / identification concern, OR
+   - Generalizability / external validity concern, OR
+   - Construct measurement concern
+   Choose the most relevant one and address it briefly but credibly.
+
+5) Output formatting:
+   - First output the Introduction draft.
+   - Then output the Intro Blueprint as a numbered list (Para 1–Para N).
+   - Then output the Contribution Statement.
+
+
+
